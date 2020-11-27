@@ -25,8 +25,12 @@
     BSD 3-Clause (基于fex-team/kityminder-core，并非kityminder-editor)
 ```
 
-如果有修改 kityminder-core 、hotbox，需要阅读 kityminder-core、hotbox 下的readme，并执行如下指令打包
+如果有修改 kityminder-core 需要阅读 kityminder-coro 下的readme，并执行如下指令打包
 ```shell script
+# kityminder-core
 cd kityminder-core
+
 npm run build
+
+
 ```
