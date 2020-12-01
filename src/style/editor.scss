@@ -135,3 +135,16 @@ div.minder-editor-container {
 .hotbox .exp .ring .button .key {
   display: none;
 }
+
+.note-box {
+  text-align: left;
+  width: 400px;
+  height: 200px;
+  background: #feffdd;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px #000;
+  overflow: auto;
+  padding: 15px;
+  position: fixed;
+  z-index: 999;
+}

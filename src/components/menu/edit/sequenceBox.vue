@@ -43,7 +43,7 @@ export default {
       minder.on && minder.on('interactchange', function () {
         this.commandValue = minder.queryCommandValue('priority');
       });
-      console.info(minder)
+      // console.info(minder)
       return minder.queryCommandState && minder.queryCommandState('priority') === -1;
     },
   },

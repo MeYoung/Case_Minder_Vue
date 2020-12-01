@@ -5,8 +5,11 @@
   <insert-box></insert-box>
   <move-box></move-box>
   <edit-del></edit-del>
+  <node-box></node-box>
   <sequence-box></sequence-box>
   <progress-box></progress-box>
+
+
 </div>
 </template>
 
@@ -18,10 +21,13 @@ import sequenceBox from './sequenceBox'
 import progressBox from './progressBox'
 import expand from './expand'
 import selection from './selection'
+import NodeBox from "./noteBox";
+
 
 export default {
   name: 'editMenu',
   components: {
+    NodeBox,
     insertBox,
     moveBox,
     editDel,
