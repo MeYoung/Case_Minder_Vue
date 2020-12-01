@@ -141,9 +141,9 @@ header {
   .attachment-group {
     width: 185px;
     @include flexcenter;
-    .el-dropdown-link {
-      font-size: 12px;
-    }
+    //.el-dropdown-link {
+    //  font-size: 12px;
+    //}
     button {
       font-size: inherit;
       width: 45px;
@@ -186,9 +186,9 @@ header {
         background-position: 50% -1150px;
       }
     }
-    .el-dropdown {
-      cursor: default;
-    }
+    //.el-dropdown {
+    //  cursor: default;
+    //}
   }
   .progress-group,
   .sequence-group {
@@ -319,17 +319,17 @@ header {
       input {
         width: 150px;
       }
-      .el-input__suffix {
-        top: 12px;
-      }
+      //.el-input__suffix {
+      //  top: 12px;
+      //}
     }
     .font-size-select {
       input {
         width: 80px;
       }
-      .el-input__suffix {
-        top: 12px;
-      }
+      //.el-input__suffix {
+      //  top: 12px;
+      //}
       margin-left: 5px;
     }
     .font-bold,
@@ -379,4 +379,14 @@ header {
       font-size: 12px;
     }
   }
+
+  //自定义标签
+  //.resource-wrap {
+  //  flex-direction: column;
+  //  padding: 15px;
+  //  .resource-item {
+  //    width: 100%;
+  //  }
+  //}
+
 }

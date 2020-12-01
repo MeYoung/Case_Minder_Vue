@@ -8,6 +8,8 @@
   <node-box></node-box>
   <sequence-box></sequence-box>
   <progress-box></progress-box>
+<!--  自定义标签-->
+  <resource-edit></resource-edit>
 
 
 </div>
@@ -22,6 +24,7 @@ import progressBox from './progressBox'
 import expand from './expand'
 import selection from './selection'
 import NodeBox from "./noteBox";
+import resourceEdit from "./resourceEdit";
 
 
 export default {
@@ -34,7 +37,8 @@ export default {
     sequenceBox,
     progressBox,
     expand,
-    selection
+    selection,
+    resourceEdit
   }
 }
 </script>
