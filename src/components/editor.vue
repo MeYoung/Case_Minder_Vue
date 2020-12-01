@@ -56,11 +56,11 @@ export default {
   methods:{
     // 设置note显示和位置
     preview(node, keyword) {
-      var icon = node.getRenderer('NoteIconRenderer').getRenderShape();
-      var b = icon.getRenderBox('screen');
-      var note = node.getData('note');
-      var x = b.cx;
-      var y = b.bottom;
+      let icon = node.getRenderer('NoteIconRenderer').getRenderShape();
+      let b = icon.getRenderBox('screen');
+      let note = node.getData('note');
+      let x = b.cx;
+      let y = b.bottom;
       this.markSource = note;
       this.showNotePreviewer = true;
       this.notBoxStyle = {
