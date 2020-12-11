@@ -1,4 +1,4 @@
-#Case_Minder_Vue
+# Case_Minder_Vue
 
 是基于[百度脑图](https://github.com/fex-team/kityminder-core) 和 [udax/vue-mindeditor](https://github.com/fudax/vue-mindeditor) 的基础上修改：
 
