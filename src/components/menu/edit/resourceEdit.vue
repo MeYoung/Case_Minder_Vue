@@ -1,10 +1,9 @@
 <template>
   <div>
-
-    <div>
-      <el-select
+     <el-select
         v-model="sourceSelectedData"
         allow-create
+        filterable
         :multiple="true"
         :popper-append-to-body="true"
         collapse-tags
@@ -20,7 +19,6 @@
           :label="item.name"
         />
       </el-select>
-    </div>
   </div>
 </template>
 <script>

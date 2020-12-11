@@ -188,7 +188,6 @@ export default {
    /*     nodePathData.push('M', box.x, box.y,
           'h', box.width, 'v', box.height,
           'h', -box.width, 'z');*/
-        console.info(nodePathData)
         if (node.getConnection() && node.parent && node.parent.isExpanded()) {
           connectionThumbData.push(node.getConnection().getPathData());
         }
