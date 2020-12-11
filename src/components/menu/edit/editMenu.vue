@@ -5,6 +5,8 @@
   <insert-box></insert-box>
   <move-box></move-box>
   <edit-del></edit-del>
+  <!--    超链接-->
+  <hyberlink></hyberlink>
 <!--  查询、过滤-->
   <search></search>
   <node-box></node-box>
@@ -28,6 +30,7 @@ import selection from './selection'
 import NodeBox from "./noteBox";
 import resourceEdit from "./resourceEdit";
 import Search from "./search/search";
+import hyberlink from "./hyberlink";
 
 
 export default {
@@ -42,7 +45,8 @@ export default {
     progressBox,
     expand,
     selection,
-    resourceEdit
+    resourceEdit,
+    hyberlink
   }
 }
 </script>
