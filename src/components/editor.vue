@@ -1,5 +1,6 @@
 <template>
-<div class="main-container">
+<!--<div class="main-container">-->
+<div>
   <header-menu></header-menu>
   <main-editor></main-editor>
   <navigator></navigator>
@@ -15,6 +16,10 @@
   </div>
 
 
+  <!--    查询过滤文本框-->
+  <search-box ref="searchBox" />
+  <search-label-box ref="searchLabelBox"></search-label-box>
+
 </div>
 
 </template>
@@ -24,6 +29,9 @@ import headerMenu from '@/components/header'
 import mainEditor from '@/components/main/mainEditor'
 import navigator from '@/components/main/navigator'
 import VueMarkdown from 'vue-markdown';
+import searchBox from "./menu/edit/search/searchBox";
+import searchLabelBox from "./menu/edit/search/searchLabelBox";
+import { expandParent } from '../utils/convert/jsonconvert';
 
 
 export default {
@@ -32,7 +40,9 @@ export default {
     headerMenu,
     mainEditor,
     navigator,
-    VueMarkdown
+    VueMarkdown,
+    searchBox,
+    searchLabelBox
   },
   //父组件中通过provider来提供变量，然后在子组件中通过inject来注入变量
   provide() {
@@ -71,6 +81,52 @@ export default {
     hidePreviewer() {
       this.showNotePreviewer = false;
     },
+    openSearchBox() {
+      this.$refs.searchBox.enterSearch();
+    },
+    openLabelBox() {
+      this.$refs.searchLabelBox.openModal().then(res => {
+        const priority = res.priority;
+        const source = res.sourceSelected;
+        const testResult = "";
+        this.filterMindForLabel(priority, testResult,source);
+      });
+    },
+    filterMindForLabel(priority, testResult, source) {
+      const json = window.minder.exportJson();
+      filter(json.root);
+      function filter(data) {
+        let needExpand = false;
+
+        const hasPriorityCondition = priority.length !== 0; // 具备Priority过滤条件
+        const hasTestResultCondition = testResult.length !== 0; // 具备testResult过滤条件
+        const hasSourceCondition = source.length !== 0; // 具备source过滤条件
+
+        // 交集
+        let intersection = null;
+        if (hasSourceCondition) {
+          intersection = source.filter(function(val) { return data.data.resource && data.data.resource.indexOf(val) > -1 });
+        }
+
+        const matchPriority = hasPriorityCondition && priority.indexOf(data.data.priority) !== -1;
+        const matchTestResult = hasTestResultCondition && testResult.indexOf(data.data.testResult) !== -1;
+        const matchSource = hasSourceCondition && intersection.length !== 0;
+        needExpand = (!hasPriorityCondition || matchPriority) && (!hasTestResultCondition || matchTestResult) && (!hasSourceCondition || matchSource);
+        if (needExpand) {
+          data.data.expandState = 'expand'
+        } else {
+          data.data.expandState = 'collapse'
+        }
+        if (data.children.length !== 0) {
+          data.children.forEach(item => {
+            filter(item);
+          });
+        }
+      }
+      json.root.data.expandState = 'expand';
+      json.root = expandParent(json.root);
+      window.minder.importJson(json);
+    }
   }
 }
 

@@ -5,6 +5,8 @@
   <insert-box></insert-box>
   <move-box></move-box>
   <edit-del></edit-del>
+<!--  查询、过滤-->
+  <search></search>
   <node-box></node-box>
   <sequence-box></sequence-box>
   <progress-box></progress-box>
@@ -25,11 +27,13 @@ import expand from './expand'
 import selection from './selection'
 import NodeBox from "./noteBox";
 import resourceEdit from "./resourceEdit";
+import Search from "./search/search";
 
 
 export default {
   name: 'editMenu',
   components: {
+    Search,
     NodeBox,
     insertBox,
     moveBox,
