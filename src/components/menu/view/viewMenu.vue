@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
 <div class="menu-container">
   <mold></mold>
   <theme></theme>
