@@ -12,7 +12,6 @@
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
-    "vue-markdown": "^2.2.4",
     "codemirror": "^5.24.2",
     "color-picker": "0.0.1",
     "element-ui": "^2.12.0",
@@ -21,7 +20,9 @@
     "kity": "^2.0.4",
     "kityminder-core": "^1.4.50",
     "marked": "^0.3.6",
+    "screenfull": "^5.0.2",
     "vue": "^2.6.10",
+    "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.3",
     "vuex": "^3.1.0"
   },

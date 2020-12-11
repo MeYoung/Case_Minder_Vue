@@ -23,6 +23,9 @@
     <div class="nav-btn nav-trigger" :class="{'active' : isNavOpen}" @click="toggleNavOpen" title="导航器">
       <div class="icon"></div>
     </div>
+    <div class="nav-btn" title="全屏/恢复" @click="fullScreenToggle">
+    <i class="el-icon-full-screen" style="font-size: 25px;" />
+    </div>
   </div>
   <div class="nav-previewer" v-show="isNavOpen"></div>
 </div>
@@ -33,6 +36,8 @@ import {
   mapGetters,
   mapActions
 } from "vuex";
+import screenfull from 'screenfull';
+
 export default {
   name: "navigator",
   data() {
@@ -70,6 +75,17 @@ export default {
   methods: {
     ...mapActions(["setMemory", "getMemory"]),
 
+    fullScreenToggle() {
+      if(screenfull.isEnabled){
+        if(screenfull.isFullscreen){
+          screenfull.exit();
+        }else {
+          screenfull.toggle();
+        }
+      }else {
+        this.$message.error('您的浏览器不支持全屏操作！');
+      }
+    },
     //避免缓存
     getNavOpenState() {
       var res = window.localStorage.getItem("navigator-hidden");
