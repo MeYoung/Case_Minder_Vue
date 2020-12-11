@@ -1,5 +1,8 @@
 <template lang="html">
 <div class="menu-container">
+<!--  撤销回退、重做-->
+  <back-and-right></back-and-right>
+
   <expand></expand>
   <selection></selection>
   <insert-box></insert-box>
@@ -31,6 +34,7 @@ import NodeBox from "./noteBox";
 import resourceEdit from "./resourceEdit";
 import Search from "./search/search";
 import hyberlink from "./hyberlink";
+import backAndRight from "./backAndRight";
 
 
 export default {
@@ -46,7 +50,8 @@ export default {
     expand,
     selection,
     resourceEdit,
-    hyberlink
+    hyberlink,
+    backAndRight
   }
 }
 </script>
