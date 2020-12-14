@@ -16,7 +16,7 @@
       }
     },
 
-    // 父组件中通过provider来提供变量，然后在子组件中通过inject来注入变量
+    // 父组件中通过provide来提供变量，然后在子组件中通过inject来注入变量
     inject: ['main'],
 
     mounted() {
