@@ -28,3 +28,6 @@ cd kityminder-core
 npm run build
 
 ```
+
+## 效果：
+![脑图](https://cdn.nlark.com/yuque/0/2020/png/248224/1608284570717-a5d61e79-7d09-4146-a031-40a363fa4d60.png#align=left&display=inline&height=1082&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2164&originWidth=2578&size=385008&status=done&style=none&width=1289)
