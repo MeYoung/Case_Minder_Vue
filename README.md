@@ -1,3 +1,5 @@
+# 为啥会有这个组件
+一切从我要做的平台说起：https://www.yuque.com/miyang.meyoung/other/wux7a6
 # Case_Minder_Vue
 
 是基于[百度脑图](https://github.com/fex-team/kityminder-core) 和 [fudax/vue-mindeditor](https://github.com/fudax/vue-mindeditor) 的基础上修改：
