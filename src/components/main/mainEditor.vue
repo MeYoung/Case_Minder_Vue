@@ -20,8 +20,10 @@
     inject: ['main'],
 
     mounted() {
+      console.log('this minde:',this.minder)
       var Editor = require('../../script/editor');
       var el = this.$el;
+      console.log('=====el====', el)
       var editor = window.editor = new Editor(el);
       this.setEditor(editor);
       if (window.localStorage.mindText) {

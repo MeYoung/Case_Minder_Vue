@@ -6,4 +6,3 @@ node_modules/
 _drafts/
 bower_components
 ./*/node_modules/
-./*/.idea

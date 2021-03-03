@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
 <div class="attachment-group">
   <div class="link ">
     <el-button class="tab-icons insert" @click="showOverlay"></el-button>

@@ -76,6 +76,8 @@ export const actions = {
     commit,
     state
   }, key) {
+    console.log('getMemory-data.key:',data.key)
+    console.log('getMemory-state:',state)
     var value = window.localStorage.getItem(key);
     var result = null || JSON.parse(value)
     console.log('action:' + result);
@@ -87,6 +89,8 @@ export const actions = {
     state
   }, data) {
     try {
+      console.log('setMemory-data.key:',data.key)
+      console.log('setMemory-state:',state)
       window.localStorage.setItem(data.key, JSON.stringify(data.value));
       return true;
     } catch (e) {

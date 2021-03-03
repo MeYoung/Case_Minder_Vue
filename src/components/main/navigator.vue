@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
 <div class="navigator">
   <div class="nav-bar">
     <div class="nav-btn zoom-in" @click="zoomIn" title="放大" :class="{ 'active' : zoomRadioIn }">
@@ -73,7 +73,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["setMemory", "getMemory"]),
+    // ...mapActions(["setMemory", "getMemory"]),
 
     fullScreenToggle() {
       if(screenfull.isEnabled){
@@ -235,6 +235,7 @@ export default {
   mounted() {
     var self = this;
     var minder = self.minder;
+    console.log("这里什么时候执行到啊。。。。。。")
 
     // 以下部分是缩略图导航器
     self.$previewNavigator = $(".nav-previewer");

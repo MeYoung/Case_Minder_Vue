@@ -68,7 +68,7 @@
     },
     computed: {
       ...mapGetters({
-        'minder': 'getMinder',
+        minder: 'getMinder',
       }),
     },
     methods: {

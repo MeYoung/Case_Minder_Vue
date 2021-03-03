@@ -44,7 +44,9 @@ define(function(require, exports, module) {
             if (typeof(target) == 'string') {
                 target = document.querySelector(target);
             }
-            if (target) {
+          console.log("======target=======",target)
+
+          if (target) {
                 if (target.tagName.toLowerCase() == 'script') {
                     var newTarget = document.createElement('div');
                     newTarget.id = target.id;

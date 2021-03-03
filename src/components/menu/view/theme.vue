@@ -64,7 +64,9 @@
         return this.minder.queryCommandState && this.minder.queryCommandState('template') === -1
       },
       templateList() {
+        console.log("them.vue 我被执行了么？？")
         let themeList = kityminder.Minder.getThemeList()
+        console.log('---themeList---',list)
         return themeList;
       },
       curTheme() {
@@ -74,7 +76,10 @@
       }
     },
     created() {
+      console.log("them.vue 我被执行了么？？")
       let list = kityminder.Minder.getThemeList()
+      console.log('---list---',list)
+
       for (var k in list) {
         let style = list[k]
         let label = {

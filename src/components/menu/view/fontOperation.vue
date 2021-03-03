@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
 <div class="font-group">
     <el-select v-model="fontFamilyDefaultValue" placeholder="字体" class="font-family-select" :disabled="disabledFont" @change="execCommandFontFamily">
         <el-option v-for="item in fontFamilys" :label="item.name" :value="item.value" :key="item.id" :style="{'font-family':item.value}">
@@ -128,6 +128,7 @@ export default {
             minder: "getMinder",
         }),
         currentTheme() {
+          console.log("forOperation 是什么时候背执行啊！！！")
             return this.minder.getThemeItems();
         },
 

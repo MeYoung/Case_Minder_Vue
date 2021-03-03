@@ -1,9 +1,9 @@
 /*!
  * ====================================================
- * Kity Minder Core - v1.4.50 - 2020-12-11
+ * Kity Minder Core - v1.4.50 - 2021-01-14
  * https://github.com/fex-team/kityminder-core
  * GitHub: https://github.com/fex-team/kityminder-core.git 
- * Copyright (c) 2020 Baidu FEX; Licensed BSD-3-Clause
+ * Copyright (c) 2021 Baidu FEX; Licensed BSD-3-Clause
  * ====================================================
  */
 
@@ -2522,6 +2522,7 @@ _p[23] = {
                 if (typeof target == "string") {
                     target = document.querySelector(target);
                 }
+                console.log("======target=======", target);
                 if (target) {
                     if (target.tagName.toLowerCase() == "script") {
                         var newTarget = document.createElement("div");

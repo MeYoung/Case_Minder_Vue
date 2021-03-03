@@ -25,8 +25,8 @@
     },
     computed: {
       ...mapGetters({
-        'minder': 'getMinder',
-        'editor': 'getEditor'
+        minder: 'getMinder',
+        editor: 'getEditor'
       }),
       commandDisabled() {
         let minder = this.minder

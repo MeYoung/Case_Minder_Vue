@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
 <div class="mold-group" :disabled="disabled">
     <el-row class="block-col-1">
         <el-col :span="24">

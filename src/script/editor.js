@@ -6,6 +6,7 @@ define(function (require, exports, module) {
   }
 
   function KMEditor(selector) {
+    console.info("selector====",selector)
     this.selector = selector;
     for (var i = 0; i < runtimes.length; i++) {
       if (typeof runtimes[i] == 'function') {

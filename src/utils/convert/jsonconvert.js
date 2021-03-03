@@ -163,13 +163,13 @@ function kmToJson(tmind) {
 }
 
 function GenerationId() {
-  let newId = (new Date() * 1e6 + Math.floor(Math.random() * 1e6)).toString(36);
+  let newId = (new Date() * 1e6 + Math.floor(Math.random() * 1e16)).toString(36);
   if (typeof(map.get(newId)) == "undefined") {
     map.set(newId, 1);
     return newId;
   } else {
     sleep(5);
-    newId = (new Date() * 1e6 + Math.floor(Math.random() * 1e6)).toString(36);
+    newId = (new Date() * 1e6 + Math.floor(Math.random() * 1e16)).toString(36);
     map.set(newId, 1);
     return newId;
   }
